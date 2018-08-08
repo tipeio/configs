@@ -14,8 +14,14 @@ module.exports = {
   ],
   plugins: ['prettier', 'jest'],
   rules: {
-    'prettier/prettier': 'error',
     'promise/catch-or-return': 'error',
+    'prettier/prettier': [
+      'error',
+      {
+        'singleQuote': true,
+        'semi': false
+      }
+    ],
     'max-lines': [
       'error',
       { max: 250, skipBlankLines: true, skipComments: true }
